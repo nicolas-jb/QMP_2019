@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title> Crear Guardarropas </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8"/>
+    <link rel="shortcut icon" type="image/x-icon" href="../fotos/qmp.ico"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../login.css">
+    <link rel="stylesheet" href="../../basics.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico"/>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand"/>
+</head>
+<body>
+<div class="tituloPagina">
+    <h1>Crear un guardarropas nuevo</h1>
+</div>
+<div class="containerCuadro">
+    <div class="cuadro">
+        <form method="post" action="/guardarropa">
+            <div class="item-cuadro">
+                <h4> Nombre </h4>
+                <input type="text" name="nombre"/>
+            </div>
+            <div class="item-cuadro">
+                <h4> Capacidad </h4>
+                <select name="capacidad" class="desplegable">
+                    <option value="ilimitada">Sin límite</option>
+                    <option value="limitada">Limitada</option>
+                </select>
+            </div>
+            <div class="item-cuadro">
+                <input type="submit" value="Crear" class="botón-cuadro">
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8"/>
+    <title> Evento </title>
+    <link rel="shortcut icon" type="image/x-icon" href="../fotos/qmp.ico"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand"/>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico"/>
+    <link rel="stylesheet" href="../../evento.css">
+    <link rel="stylesheet" href="../../basics.css">
+    <link rel="stylesheet" href="../../prendas.css">
+    <link rel="stylesheet" href="../../sugerencias.css">
+    <link rel="stylesheet" href="../../calificaciones.css">
+</head>
+<body>
+{{> botonHome.hbs}}
+<div class="tituloPagina">
+    <h1> Evento: {{nombre}}</h1>
+    <br>
+    <h3> Fecha: {{fecha}}</h3>
+    <span>{{descripcion}}</span>
+
+    <div class="container-sugerencias">
+        {{#each sugerenciasAceptadas}}
+
+            <div class="detallesSugerencias" align="center">
+                {{#each atuendo.prendasSuperiores}}
+                    {{nombre}}
+                {{/each}}
+                <br>
+                {{atuendo.prendaInferior.nombre}}
+                <br>
+                {{atuendo.calzado.nombre}}z
+                <br>
+                {{atuendo.accesorio.nombre}}
+                <br>
+                {{textoCalificacion}}
+                <br>
+                <div class="calificaciones">
+                    <div class="icono">
+                        <form method="POST" action="/eventos/{{../id}}/sugerenciasCalificadas/{{id}}">
+                            <input type="number" name="calificacion" value="-2" style="display: none">
+                            <input type="image" src="../../fotos/muchoFrio.png" style="width:100%"/>
+                        </form>
+                    </div>
+                    <div class="icono">
+                        <form method="POST" action="/eventos/{{../id}}/sugerenciasCalificadas/{{id}}">
+                            <input type="number" name="calificacion" value="-1" style="display: none">
+                            <input type="image" src="../../fotos/pocoFrio.png" style="width:100%"/>
+                        </form>
+                    </div>
+                    <div class="icono">
+                        <form method="POST" action="/eventos/{{../id}}/sugerenciasCalificadas/{{id}}">
+                            <input type="number" name="calificacion" value="0" style="display: none">
+                                <input type="image" src="../../fotos/ok.png" style="width:100%"/>
+                        </form>
+                    </div>
+                    <div class="icono">
+                        <form method="POST" action="/eventos/{{../id}}/sugerenciasCalificadas/{{id}}">
+                            <input type="number" name="calificacion" value="1" style="display: none">
+                                <input type="image" src="../../fotos/pocoCalor.png" style="width:100%"/>
+                        </form>
+                    </div>
+                    <div class="icono">
+                        <form method="POST" action="/eventos/{{../id}}/sugerenciasCalificadas/{{id}}">
+                            <input type="number" name="calificacion" value="2" style="display: none">
+                                <input type="image" src="../../fotos/muchoCalor.png" style="width:100%"/>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        {{/each}}
+    </div>
+
+</div>
+</body>
+</html>

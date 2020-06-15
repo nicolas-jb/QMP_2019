@@ -1,0 +1,10 @@
+
+.tituloInicio {
+    text-align: center;
+    font-family: "Pacifico";
+    font-size: 100px;
+    padding-top: 60px;
+    justify-content: center;
+    display: flex;
+}
+

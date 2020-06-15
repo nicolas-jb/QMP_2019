@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title> Prendas </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8"/>
+    <link rel="shortcut icon" type="image/x-icon" href="../fotos/qmp.ico"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand"/>
+    <link rel="stylesheet" href="../../prendas.css">
+    <link rel="stylesheet" href="../../basics.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand"/>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico"/>
+</head>
+<body>
+<div>
+    {{> botonHome.hbs}}
+</div>
+<div class="nombreGuardarropas">
+    <h1>
+        Prendas de {{ nombre }}
+    </h1>
+</div>
+<div class="botonera">
+    <form method="get" action="/guardarropas">
+        <input class="botón" type="submit" value="Volver a Guardarropas">
+    </form>
+    <form method="get" action="/guardarropas/{{id}}/prendaPaso1">
+        <button class="botón">Cargar una prenda</button>
+    </form>
+</div>
+<div class="container-items">
+    {{#each prendas as prenda}}
+        <div class="item">
+            <img src="{{fotoPrenda}}" alt="prendas" height="130" width="130"/>
+            <br>
+            <div class="detalles">
+                <h2>{{ nombre }}</h2>
+            </div>
+        </div>
+    {{/each}}
+</div>
+
+</body>
+</html>

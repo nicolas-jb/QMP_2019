@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="../../basics.css">
+    <link rel="stylesheet" href="../../home.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../fotos/qmp.ico"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand"/>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico"/>
+</head>
+<body>
+{{> botonHome.hbs}}
+<div class="tituloPagina">
+    <h1>¡Bienvenide {{ nombre }}!</h1>
+</div>
+<div class="container-items">
+    <div class="item item-home">
+        <h3>Eventos</h3>
+        <form method="GET" action="/calendar">
+            <input type="image" src="/fotos/calendario.png" alt="eventos" width="200" height="200"/>
+        </form>
+    </div>
+    <div class="item item-home">
+        <h3>Guardarropas</h3>
+        <form method="get" action="/guardarropas">
+            <input type="image" src="/fotos/guardarropas2.png" alt="guardarropas" width="200" height="200"/>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

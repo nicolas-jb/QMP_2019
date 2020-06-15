@@ -1,0 +1,39 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8"/>
+    <link rel="shortcut icon" type="image/x-icon" href="../fotos/qmp.ico" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand"/>
+    <link rel="stylesheet" href="../../prendas.css">
+    <link rel="stylesheet" href="../../basics.css">
+</head>
+<body>
+<title>Paso 2 de 3</title>
+<div class="tituloPagina">
+    <h1>Crear una nueva prenda</h1>
+</div>
+<div class="containerCuadro">
+    <div class="cuadro">
+        <form method="POST" action="/prendaPaso2">
+
+            <h4 class="tituloPagina">Material</h4>
+            <select class="desplegable" name="material">
+                {{#each materiales}}
+                    <option>{{this}}</option>
+                {{/each}}
+            </select>
+            <br>
+            <h4 class="tituloPagina">Trama</h4>
+            <select class="desplegable" name="trama">
+                {{#each tramas}}
+                    <option>{{this}}</option>
+                {{/each}}
+            </select>
+            <br>
+            <input type="submit" value="Siguiente" class="botón">
+        </form>
+    </div>
+</div>
+</body>
+</html>

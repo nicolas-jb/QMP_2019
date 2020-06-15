@@ -1,0 +1,146 @@
+.botón {
+    margin: 1em;
+    background-color: rgba(182, 101, 139, 0.78);
+    border-color: darkgrey;
+    border-width: thin;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 12px;
+    opacity: 0.75;
+}
+
+.botonera {
+    display: flex;
+    justify-content: center;
+}
+
+.botón:hover {
+    opacity: 1;
+}
+
+.tituloPagina {
+    margin-top: 5%;
+    text-align: center;
+    position: center;
+    font-family: "Quicksand";
+}
+
+.botonChicoG {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    background-color: lightgrey;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 12px;
+    border: none;
+    position: relative;
+}
+
+.botonChicoR {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    background-color: rgba(204, 116, 157, 0.78);
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 12px;
+    border: none;
+    position: relative;
+}
+
+.botonHome {
+    margin-top: 25px;
+    margin-bottom: 3px;
+    background-color: transparent;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 12px;
+    border: none;
+    position: relative;
+}
+
+.tituloQmp {
+    text-align: center;
+    position: center;
+    font-family: "Pacifico";
+    font-size: 60px;
+}
+
+.cuadro {
+    text-align: center;
+    margin-top: 7%;
+    margin-left: 40%;
+    margin-right: 40%;
+    background-color: rgba(245, 247, 250, 0.35);
+    border-radius: 1em;
+    position: center;
+    padding: 3%;
+    font-family: "Quicksand";
+    justify-content: space-evenly;
+}
+
+.botón-cuadro {
+    background-color: rgba(182, 101, 139, 0.78);
+    border-color: darkgrey;
+    border-width: thin;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 12px;
+    opacity: 0.75;
+}
+
+.cuadro > form {
+    margin-block-end: 0;
+}
+
+.item-cuadro {
+    margin-bottom: 25px;
+}
+
+.containerCuadro {
+    display: flex;
+    justify-content: center;
+}
+
+.container-items {
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item {
+    border: 1px solid gray;
+    margin: 50px;
+    padding: 20px;
+    border-radius: 20px;
+    font-family: "Quicksand";
+    text-align: center;
+    width: 30%;
+}
+
+.detalles {
+    margin-top: 15px;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.desplegable {
+    width: 200px;
+    height: 35px;
+}
+
+body {
+    background-image: url("fotos/fondo3.png");
+    background-repeat: repeat;
+    background-size: 100%;
+}

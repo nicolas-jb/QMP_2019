@@ -1,0 +1,12 @@
+.container-sugerencias{
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.detallesSugerencias {
+    margin-top: 15px;
+    display: inline-block;
+}

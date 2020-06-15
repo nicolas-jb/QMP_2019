@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>Calendar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8"/>
+    <link rel="stylesheet" href="../../calendar.css">
+    <link rel="stylesheet" href="../../basics.css">
+    <link rel="stylesheet" href="../../home.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../fotos/qmp.ico"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand"/>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico"/>
+</head>
+<body>
+<div>
+    {{> botonHome.hbs}}
+</div>
+<div class="calendar-header tituloPagina">
+    <h2>{{mes}}</h2>
+    <h3>{{anio}}</h3>
+    <div>
+        <form method="get" action="/nuevoEvento">
+            <input type="submit" value="Crear Evento" class="botón">
+        </form>
+    </div>
+</div>
+<main id="calendar">
+    <section class="th">
+        <span>Lunes</span>
+        <span>Martes</span>
+        <span>Miercoles</span>
+        <span>Jueves</span>
+        <span>Viernes</span>
+        <span>Sabado</span>
+        <span>Domingo</span>
+    </section>
+    {{#each semanas}}
+        <div class="week">
+            {{#each dias}}
+                <div data-date="{{dia}}">
+                    <ul>
+                        {{#each eventos}}
+                            <li>
+                                <a href="/eventos/{{id}}">{{nombre}}</a>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            {{/each}}
+        </div>
+    {{/each}}
+</main>
+</body>
+</html>

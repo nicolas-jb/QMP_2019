@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title> Sugerencias Aceptadas </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8"/>
+    <link rel="shortcut icon" type="image/x-icon" href="../fotos/qmp.ico"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand"/>
+    <link rel="stylesheet" href="../../prendas.css">
+    <link rel="stylesheet" href="../../basics.css">
+    <link rel="stylesheet" href="../../home.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand"/>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico"/>
+</head>
+
+<div class="botonVolver">
+    <form method="get" action="/eventos/{{evento.id}}">
+        <input class="botonChicoG" type="submit" value="Volver al Evento">
+    </form>
+</div>
+
+<div class="container-sugerencias">
+{{#each sugerencias}}
+        <div class="item">
+            <div class="detallesSugerencias" align="center">
+                {{#each atuendo.prendasSuperiores}}
+                    {{nombre}}
+                {{/each}}
+                <br>
+                {{atuendo.prendaInferior.nombre}}
+                <br>
+                {{atuendo.calzado.nombre}}
+                <br>
+                {{atuendo.accesorio.nombre}}
+                <br>
+                {{textoCalificacion}}
+                <br>
+                <form method="POST" action="/eventos/{{../evento.id}}/sugerenciasCalificadas/{{id}}">
+                    <input type="number" name="calificacion" value="0">
+                    <br>
+                    <button> {{textoBoton}} </button>
+                </form>
+            </div>
+        </div>
+{{/each}}
+    </div>
+
+</html>

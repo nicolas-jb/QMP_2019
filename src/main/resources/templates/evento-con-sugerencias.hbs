@@ -1,0 +1,50 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8"/>
+    <title> Evento </title>
+    <link rel="shortcut icon" type="image/x-icon" href="../fotos/qmp.ico"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand"/>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico"/>
+    <link rel="stylesheet" href="../../evento.css">
+    <link rel="stylesheet" href="../../basics.css">
+    <link rel="stylesheet" href="../../prendas.css">
+    <link rel="stylesheet" href="../../sugerencias.css">
+</head>
+<body>
+{{> botonHome.hbs}}
+<div class="tituloPagina">
+    <h1> Evento: {{nombre}}</h1>
+    <br>
+    <h3> Fecha: {{fecha}}</h3>
+    <span>{{descripcion}}</span>
+
+    <div class="container-sugerencias">
+        {{#each sugerencias}}
+            <div class="item">
+                <div class="detallesSugerencias" align="center">
+                    {{#each atuendo.prendasSuperiores}}
+                        {{nombre}}
+                    {{/each}}
+                    <br>
+                    {{atuendo.prendaInferior.nombre}}
+                    <br>
+                    {{atuendo.calzado.nombre}}
+                    <br>
+                    {{atuendo.accesorio.nombre}}
+                    <br>
+                    <form method="POST" action="/eventos/{{../id}}/sugerenciasAceptadas">
+                        <div style="display: none">
+                            <input name="sugerenciaId" value="{{id}}">
+                        </div>
+                        <button class="botonChicoG">Aceptar Sugerencia</button>
+                    </form>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+
+</div>
+</body>
+</html>

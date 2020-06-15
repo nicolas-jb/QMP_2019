@@ -1,0 +1,21 @@
+.botonVolver {
+    text-align: center;
+}
+
+.botonHome {
+    text-align: center;
+}
+
+.nombreGuardarropas {
+    margin-top: 5%;
+    text-align: center;
+    position: center;
+    font-family: "Quicksand";
+}
+
+.confirmar {
+    text-align: center;
+    font-family: "Quicksand";
+    padding-top: 1em;
+}
+

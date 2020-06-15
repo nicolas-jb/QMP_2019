@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title> Guardarropas </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8"/>
+    <link rel="shortcut icon" type="image/x-icon" href="../fotos/qmp.ico"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand"/>
+    <link rel="stylesheet" href="../../guardarropas.css">
+    <link rel="stylesheet" href="../../basics.css">
+    <link rel="stylesheet" href="../../home.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand"/>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico"/>
+</head>
+<body>
+{{> botonHome.hbs}}
+<div class="tituloPagina">
+    <h1>
+        Guardarropas de {{ nombre }}
+    </h1>
+</div>
+<div class="botonera">
+    <form method="get" action="/guardarropa">
+        <input type="submit" value="Crear Guardarropas" class="botón">
+    </form>
+</div>
+<div class="container-items">
+    {{#each guardarropas}}
+        <div class="guardarropas">
+            <img src="/fotos/guardarropas.png" alt="guardarropa"/>
+            <div class="detalles">
+                <h2>{{ nombre }}</h2>
+                <form method="get" action="/guardarropas/{{this.id}}">
+                    <input type="submit" value="Abrir" class="botonChicoG">
+                </form>
+            </div>
+        </div>
+    {{/each}}
+</div>
+
+</body>
+</html>

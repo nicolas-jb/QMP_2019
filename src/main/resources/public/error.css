@@ -1,0 +1,27 @@
+.mensaje {
+    text-align: center;
+    margin-top: 5%;
+    position: center;
+    font-family: "Quicksand";
+    font-size: 90px;
+    color: lightskyblue;
+}
+
+.imagenRobot {
+    text-align: center;
+}
+
+.reintentar {
+    text-align: center;
+}
+
+.botón {
+    background-color: lightskyblue;
+    border: none;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 40px;
+    border-radius: 12px;
+    padding: 15px 32px;
+}

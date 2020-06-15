@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title> Crear Evento </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8"/>
+    <link rel="shortcut icon" type="image/x-icon" href="../fotos/qmp.ico"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand"/>
+    <link rel="stylesheet" href="../../nuevaPrenda.css">
+    <link rel="stylesheet" href="../../basics.css">
+</head>
+<body>
+
+<div class="tituloPagina">
+    <h1>Crear un evento nuevo</h1>
+</div>
+
+<div class="containerCuadro">
+    <div class="cuadro">
+        <form method="POST" action="/eventos">
+            <div class="item-cuadro">
+                <h4 class="tituloPagina">Nombre</h4>
+                <input type="text" name="nombreEvento"/>
+            </div>
+            <div class="item-cuadro">
+                <h4 class="tituloPagina">Fecha</h4>
+                <input type="date" name="fechaEvento" min={{strToday}}>
+            </div>
+            <div class="item-cuadro">
+                <input type="submit" value="Generar" class="botón-cuadro">
+            </div>
+        </form>
+        <form method="GET" action="/calendar">
+            <div class="item-cuadro">
+                <input class="botón-cuadro" type="submit" value="Volver">
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
